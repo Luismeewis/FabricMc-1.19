@@ -3,6 +3,7 @@ package net.luismeewis.tutorialmod.block;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.luismeewis.tutorialmod.TutorialMod;
+import net.luismeewis.tutorialmod.block.custom.JumpyBlock;
 import net.luismeewis.tutorialmod.item.ModItemGroup;
 import net.minecraft.block.Block;
 import net.minecraft.block.Material;
@@ -26,6 +27,9 @@ public class ModBlocks {
     public static final Block DEEPSLATE_TANZANITE_ORE=registerBlock("deepslate_tanzanite_ore",
             new OreBlock(FabricBlockSettings.of(Material.STONE).strength(4f).requiresTool(),
             UniformIntProvider.create(3,7)),ModItemGroup.TANZANITE);
+
+    public static final Block JUMPY_BLOCK=registerBlock("jumpy_block",
+            new JumpyBlock(FabricBlockSettings.of(Material.METAL).strength(4f).requiresTool()), ModItemGroup.TANZANITE);
 
     private static Block registerBlock(String name, Block block, ItemGroup tab){
         registerBlockItem(name, block, tab);
